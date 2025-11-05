@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h2>Welcome to My Portfolio</h2>
+<p>Explore my skills and projects below:</p>
+
+<h3>My Skills:</h3>
+<ul>
+  {% for skill in skills %}
+    {% if skill == "Django" %}
+      <li><strong>{{ skill }}</strong> (Framework Expert)</li>
+    {% else %}
+      <li>{{ skill }}</li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endblock %}
